@@ -1,4 +1,4 @@
-## Manually cloning
+## Manually cloning for alient theme
 
 1.  Clone the repository:
     ```bash
@@ -13,7 +13,7 @@
     git submodule update --init --recursive --remote
     ```
 
-## Add to .zshrc
+## Add to .zshrc for syntax higlight
 
 Add the following line to your `~/.zshrc` file:
 
