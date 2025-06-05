@@ -10,54 +10,21 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="agnoster"
 source ~/alien/alien.zsh
-export ALIEN_THEME="red"
-#export ALIEN_SECTION_TIME_FG=0
-# Nice colors I've found
-# 23, 62 light purple, 89 dark ping, 96 pale pink
-#56 ace
-#export ALIEN_SECTION_TIME_BG=24
-#export ALIEN_SECTION_BATTERY_BG=70
-#export ALIEN_SECTION_USER_FG=300
-#export ALIEN_SECTION_USER_BG=65
-#export ALIEN_SECTION_PATH_BG=98
-
-
-# --- Asexual Flag Palette for Alien Theme (Corrected - No Shell Variables) ---
-
-# Color Reference (for your information only, these are not variables):
-# Black:  xterm 16
-# Gray:   xterm 247
-# White:  xterm 15
-# Purple: xterm 90
-# Text on Dark Backgrounds (Black, Purple): White (xterm 15)
-# Text on Lighter Backgrounds (Gray, White): Black (xterm 16)
-
-# --- Section Order ---
-# Ensure your ALIEN_SECTIONS_LEFT and ALIEN_SECTIONS_RIGHT are defined
-# as you want them. For example:
-# export ALIEN_SECTIONS_LEFT=(
-#   exit
-#   battery
-#   user
-#   path
-#   newline
-#   # vcs_branch:async
-#   # vcs_status:async
-#   # vcs_dirty:async
-#   ssh
-#   venv
-#   prompt
-# )
-# export ALIEN_SECTIONS_RIGHT=(
-#   time
-# )
-
-# --- Section Colors ---
+export ALIEN_SECTIONS_LEFT=(
+  exit
+  time
+  user
+  path
+  newline
+  ssh
+  venv
+  prompt
+)
 
 # 1. Exit Section (Black Background, White Text)
 export ALIEN_SECTION_EXIT_FG=15
-export ALIEN_SECTION_EXIT_BG=16
-export ALIEN_SECTION_EXIT_BG_ERROR=160 # A red for errors (e.g., xterm 160 or 196)
+export ALIEN_SECTION_EXIT_BG=89
+export ALIEN_SECTION_EXIT_BG_ERROR=89 # A red for errors (e.g., xterm 160 or 196)
 # export ALIEN_SECTION_EXIT_CODE=0 # Optional: To disable numeric exit-code
 
 # 2. Battery Section (Gray Background, Black Text)
@@ -66,12 +33,12 @@ export ALIEN_SECTION_BATTERY_BG=247
 
 # 3. User Section (White Background, Black Text)
 export ALIEN_SECTION_USER_FG=16
-export ALIEN_SECTION_USER_BG=15
+export ALIEN_SECTION_USER_BG=7
 # export ALIEN_SECTION_USER_HOST=1 # Optional: To show hostname
 
 # 4. Path Section (Purple Background, White Text)
 export ALIEN_SECTION_PATH_FG=15
-export ALIEN_SECTION_PATH_BG=90
+export ALIEN_SECTION_PATH_BG=16
 # export ALIEN_SECTION_PATH_COMPONENTS=2 # Optional: To change path components
 
 # --- Sections After Newline (if `newline` is in ALIEN_SECTIONS_LEFT) ---
@@ -84,29 +51,13 @@ export ALIEN_SECTION_SSH_BG=16
 export ALIEN_SECTION_VENV_FG=16
 export ALIEN_SECTION_VENV_BG=247
 
-# --- VCS Sections (if you use them) ---
-# Example styling:
-# export ALIEN_SECTION_VCS_BRANCH_FG=15 # White text
-# export ALIEN_SECTION_VCS_BRANCH_BG=16 # Black background
-
-# export ALIEN_SECTION_VCS_STATUS_FG=16 # Black text
-# export ALIEN_SECTION_VCS_STATUS_BG=247 # Gray background
-
-# export ALIEN_SECTION_VCS_DIRTY_FG=16    # Black text (or a warning color like yellow/orange)
-# export ALIEN_SECTION_VCS_DIRTY_BG=15    # White background (or a distinct background)
-
 # --- Prompt Symbol ---
-export ALIEN_PROMPT_SYM=""
 export ALIEN_PROMPT_FG=90 # Purple symbol (or 15 for White)
 
 # --- Time Section (Right Aligned) ---
 # Option 1: Purple Background, White Text
-export ALIEN_SECTION_TIME_FG=15
-export ALIEN_SECTION_TIME_BG=90
-# Option 2: Black Background, White Text
-# export ALIEN_SECTION_TIME_FG=15
-# export ALIEN_SECTION_TIME_BG=16
-# export ALIEN_SECTION_TIME_FORMAT=%H:%M:%S # Optional: To change time format
+export ALIEN_SECTION_TIME_FG=16
+export ALIEN_SECTION_TIME_BG=15
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
